@@ -86,7 +86,7 @@ def generate_property_caption(image_path):
 
         prompt = (
             "You are a real estate marketing expert. "
-            "Describe this property image in a short, professional caption suitable for Instagram. "
+            # "Describe this property image in a short, professional caption suitable for Instagram. "
             "Mention type, vibe, and visible features."
         )
 
