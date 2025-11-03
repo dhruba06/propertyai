@@ -16,16 +16,14 @@ logger = logging.getLogger(__name__)
 # Load variables from .env file
 # load_dotenv()
 
-# API_KEY = os.getenv("GENAI_API_KEY", None)
-# if not API_KEY:
-#     raise RuntimeError("GENAI_API_KEY not set in environment")
-# genai.configure(api_key=API_KEY)
-# model = genai.GenerativeModel("gemini‑2.5-flash")
-
-
-API_KEY = "AIzaSyALLofGfhSp_OvH8cFcdN0II66Qu6R5MnM"  # Replace with your API key
+API_KEY = os.getenv("GENAI_API_KEY", None)
+if not API_KEY:
+    raise RuntimeError("GENAI_API_KEY not set in environment")
 genai.configure(api_key=API_KEY)
-model = genai.GenerativeModel("gemini-2.5-flash")
+model = genai.GenerativeModel("gemini‑2.5-flash")
+
+
+
 
 app = Flask(__name__)
 CORS(app)
